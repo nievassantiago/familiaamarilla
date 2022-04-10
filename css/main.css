@@ -10,3 +10,268 @@
 }
 
 
+
+.cuerpo{
+    font-family:Simpsonfont;
+    background-image: url(../img/fondo.jpg);
+    overflow: auto
+    ;
+}
+
+
+.padreCabezas{
+    display: flex;
+    height: 3.5rem;
+    justify-content: center;
+
+}
+
+
+
+header h1{
+    height: 4.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    color:#C53CA1;
+    background-image: url(../img/beasim.jpg) ;
+
+}
+
+/*aca empieza el menu*/
+
+ 
+nav{
+    display: flex;
+    margin-top: 50px;
+    justify-content:center;
+    text-align: center;
+    flex-wrap: nowrap; 
+}  
+
+.lista li { 
+   display: inline-block;
+   background-color:whitesmoke;
+   margin:2rem 2rem;
+}
+.lista li a{
+  color: #C53CA1;
+  text-decoration: none;
+}
+.lista :hover{
+   transform: scale(1.6);
+
+}
+/* aca termina el menu*/
+
+h2{
+    text-align: center;
+    padding: auto;
+    background-color: azure;
+    margin: 2.5rem;
+    border: radius 30%;
+   
+}
+
+/*!!!!!!!! santy, este es el lio de imagenes, jeje!!!!!!!*/
+
+.imgsHomero{
+    display: flex;
+    justify-content:center;
+    justify-content: space-around;
+}
+
+.imgsHomero .videoHomero{
+    height: auto;
+    width: 40%;
+    border-radius: 15px;
+    border: 1rem black solid;
+
+}
+
+/*!!!!!! y aca termina!!!!!!!!*/
+/*formularios e imagenes del intento de formulario jeje*/
+
+.hCuatro{
+    display: inline block;
+    color: #C53CA1;
+    padding: auto;
+    border: 10px solid black;
+    background-color: azure;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+}
+
+
+
+
+.padreImgs {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-direction:row;
+    justify-content: space-evenly
+    
+    
+}
+
+.tipoHomero img:hover{
+    transform: scale(1.5);
+}
+
+.tipoHomero{
+    background-color:#C53CA1;
+    margin: 10px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 25%;
+}
+
+
+
+
+.padreImgs .tipoHomero img{
+    width: 12rem;
+    height:140px;
+    margin: 25px;
+    padding: 2px;
+    border:5px black solid;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+}
+
+
+.pieTodos{
+    margin-top: 25px;
+    display: flex;
+    width: 100%;
+    color: #C53CA1;
+    background: white;
+    justify-content: space-evenly;}
+
+
+
+
+
+/* ACA EMPIEZA ......ELLOS SON !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
+
+
+
+.img2{
+    height: 580px;
+    width:560px ;
+    padding: auto;
+    margin: 15px 5px 5px 400px;
+    justify-items: center;
+    border: 5px black solid;
+    border-radius: 50px;
+    
+
+}
+ 
+p
+.pArticulo{
+    text-align: center;
+    background-color: #C53CA1;
+    justify-content: center;
+    padding: 1rem;
+}
+
+
+/*aca empieza ..............REMERAS DE BART!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
+
+
+.lista3{
+    
+    padding: 0%;
+    width: 34%;    
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+
+.lista3 li { 
+  display: inline-block;
+ 
+
+}
+.lista3 li a{
+   
+   color: #C53CA1;
+   padding: 20px;
+   display: block;
+   
+
+
+}
+.lista3 a:hover{
+   background: white
+}
+
+.img3{
+    height: 580px;
+    width:560px ;
+    padding: auto;
+    margin: 15px 5px 5px 400px;
+    justify-items: center;
+    border: 5px black solid;
+    border-radius: 50px;
+}
+#subtitulo-foto{
+    
+    justify-content: center;
+    margin: 5px 30% 5px 28%;
+    padding: 1rem;
+    color: #C53CA1;
+}
+
+/*aca empiez............CONTACTO!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.videoLobo1{
+    height: 580px;
+    width:560px ;
+    padding: auto;
+    margin: 15px 5px 5px 400px;
+    justify-items: center;
+    border: 5px black solid;
+    border-radius: 50px;
+    
+}
+.formS{
+    
+    height: 350px;
+    width:150px ;
+    padding: 15px 20px 30px 40px;
+    margin: 15px 5px 5px 400px;
+    justify-items: center;
+  
+    
+}
+/*media para el responsive*/
+
+@media (min-width: 600px) {
+    .cuerpo {
+      grid-template:
+        "header  header" 100px
+        "nav  nav" auto
+        "main  main" auto
+        "footer footer" 100px /
+        200px    auto;
+    }
+/*media para el responsive*/
+/*media para el responsive*/
+
+ @media (min-width: 900px) {
+    .cuerpo {
+      grid-template:
+        "header  header" 100px
+        "nav  nav" auto
+        "main  main" auto
+        "footer " 100px /
+        200px    auto; }
