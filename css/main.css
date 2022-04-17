@@ -23,7 +23,7 @@
     display: flex;
     height: 3.5rem;
     justify-content: center;
-
+    background-image: url(../img/beasim.jpg) ;
 }
 
 
@@ -33,7 +33,7 @@ header h1{
     text-align: center;
     margin-top: 1rem;
     color:#C53CA1;
-    background-image: url(../img/beasim.jpg) ;
+   
 
 }
 
@@ -275,3 +275,7 @@ p
         "main  main" auto
         "footer " 100px /
         200px    auto; }
+          
+
+
+   
