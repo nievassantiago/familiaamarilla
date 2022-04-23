@@ -1,134 +1,221 @@
-*{
+/*siempre resetea santy acordate*/
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-@font-face {
+  }
+  /*para el font, me costo un monton descargarlo eh, punto mas ahi*/
+  @font-face {
     font-family:Simpsonfont;
     src: url(fuente/Simpsonfont.ttf);
-}
-
-
-
-.cuerpo{
+  }
+  
+  body{
     font-family:Simpsonfont;
-    background-image: url(../img/fondo.jpg);
-    overflow: auto
-    ;
-}
-
-
-.padreCabezas{
+    src: url(fuente/Simpsonfont.ttf);
+    font-size: 1.2rem;
+    min-height: 100%;
+    flex-wrap: wrap;
+    
+  }
+  
+  .grid-container >  {
+    border-radius: 4px;
+    padding: 10px;
+    
+  }
+  
+  .cabeza {
+    grid-area: cabeza;
+   
+  }
+  
+  .navbar {
+    grid-area: navbar;
+    
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+   
+  }
+  
+  .main {
+    grid-area: main;
+    
+  }
+  
+  .footer {
+    grid-area: footer;
+    
+  }
+  
+  .grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template:
+      "cabeza"  100px
+      "navbar"  50px
+      "main"    auto
+      "sidebar" 50px
+      "footer"  100px;
+  }
+  /* media para las mobile*/
+  @media (min-width: 600px) {
+    .grid-container {/* comento esto, por que
+      con el grid-template, simplidico todo
+      pero lo deho comentado, para recordar las dos maneras
+       grid-template-columns: 200px auto;
+      grid-template-rows: 100px 50px auto 100px;
+      grid-template-areas: 
+      "cabeza  cabeza"
+      "navbar  navbar"
+      "sidebar main"
+      "footer  footer"; */
+     /* de esta manera simplifico todo lo comentado de arriba, pero prefiero dejarlo*/
+      grid-template:
+        "cabeza  cabeza" 100px
+        "navbar  navbar" 50px
+        "sidebar main"   auto
+        "footer  footer" 100px /
+         200px    auto;
+    }
+  }
+   /*media para el responsive*/
+  
+  @media (min-width: 900px) {
+    .grid-container {
+      grid-template:
+        "cabeza cabeza cabeza"  100px
+        "navbar  main   sidebar" auto
+        "footer  footer footer"  100px /
+        200px    auto   200px;
+    }
+  }
+   /* le metemos un poquito de flow, digo de FLEX, jeje (no sos gracioso santy)*/
+  /*el header   */
+  
+  .cabeza{
     display: flex;
-    height: 3.5rem;
+    background-image: url(/img/beasim.jpg) ; 
     justify-content: center;
-    background-image: url(../img/beasim.jpg) ;
-}
-
-
-
-header h1{
+  }
+  .cabeza h1{
     height: 4.5rem;
-    text-align: center;
-    margin-top: 1rem;
+    font-size: auto;
+    margin: 1rem 0px 2rem 0px;
     color:#C53CA1;
-   
-
-}
-
-/*aca empieza el menu*/
-
- 
-nav{
+    
+  }
+  /* el menu empezamos a flexiarlo tuki tuki*/
+  .navbar{
     display: flex;
-    margin-top: 50px;
-    justify-content:center;
-    text-align: center;
-    flex-wrap: nowrap; 
-}  
-
-.lista li { 
-   display: inline-block;
-   background-color:whitesmoke;
-   margin:2rem 2rem;
-}
-.lista li a{
-  color: #C53CA1;
-  text-decoration: none;
-}
-.lista :hover{
-   transform: scale(1.6);
-
-}
-/* aca termina el menu*/
-
-h2{
-    text-align: center;
-    padding: auto;
-    background-color: azure;
-    margin: 2.5rem;
-    border: radius 30%;
+    background-image: url(/img/fondo.jpg);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
    
-}
-
-/*!!!!!!!! santy, este es el lio de imagenes, jeje!!!!!!!*/
-
-.imgsHomero{
-    display: flex;
-    justify-content:center;
-    justify-content: space-around;
-}
-
-.imgsHomero .videoHomero{
-    height: auto;
-    width: 40%;
-    border-radius: 15px;
-    border: 1rem black solid;
-
-}
-
-/*!!!!!! y aca termina!!!!!!!!*/
-/*formularios e imagenes del intento de formulario jeje*/
-
-.hCuatro{
-    display: inline block;
+  }
+  .navbar .lista{
+    list-style: none;
+    padding: 70% ;
+    text-align: center;
+  }
+   
+  .lista li{
+    height:50px;
+    text-align: center;
+    margin-top: 30%;
+  
+  }
+  .lista li:hover{ 
+     overflow:hidden;
+     padding:20px 10px;
+  }
+  
+  .lista li a{
+    margin: 50% 25px;
+    text-align: center;
     color: #C53CA1;
-    padding: auto;
-    border: 10px solid black;
-    background-color: azure;
-    margin-top: 50px;
-    margin-bottom: 25px;
-    border-radius: 15px;
-}
-
-
-
-
-.padreImgs {
+    padding: 1rem 25px ;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  /* el menu TERMINO aca*/
+  
+  /* VAMOS CON EL H2*/
+  
+  .main{
+    color:;
+  
+    
+  }
+  .main h2{
+    margin: 12px 1rem;
+    padding-bottom:1rem;
+    background-color: #C53CA1;
+  }
+  /* las imagenes de el Main por here*/
+   
+  .imgsHomero{
     display: flex;
-    flex-flow: row nowrap;
-    flex-direction:row;
+    justify-content:center;
+    border-radius: 1rem;
+    justify-content: space-evenly;
+    background-image: url(/img/fondo.jpg);
+  }
+  
+  .imgsHomero .videoHomero{
+    margin: 1em;
+    border-radius: 1rem;
+    border: 0.2em black solid;
+    
+   
+  }
+  .imgsHomero img{
+    margin: 1em;
+    border-radius: 1rem;
+    border: 0.2em black solid;
+  }
+  /* el footer santy */
+  .footer{
+    background-image: url(/img/beasim3\ -\ copia.jpg);
+    display: flex;
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+    color: #C53CA1;
+  }
+  .footer p{
+    margin-top: 50px;
+  }
+  
+  .footer h3{
+    margin-top: 50px;
+  }
+  /* aca termina el footer genio*/
+  .hCuatro:hover{
+      transform: scale(1.1);
+      background-color: #C53CA1;
+    }
+  
+  .main .padreImgs{
+    display: flex;
+    flex-flow: row;
+    flex-direction:;
     justify-content: space-evenly
-    
-    
-}
-
-.tipoHomero img:hover{
+  }
+  .tipoHomero img:hover{
     transform: scale(1.5);
-}
-
-.tipoHomero{
-    background-color:#C53CA1;
+  }
+  .tipoHomero{
+    
     margin: 10px;
     border-top-left-radius: 50%;
     border-top-right-radius: 25%;
-}
-
-
-
-
-.padreImgs .tipoHomero img{
+  }
+  .padreImgs .tipoHomero img{
     width: 12rem;
     height:140px;
     margin: 25px;
@@ -138,144 +225,40 @@ h2{
     border-top-right-radius: 50% 50%;
     border-bottom-right-radius: 50% 50%;
     border-bottom-left-radius: 50% 50%;
-}
-
-
-.pieTodos{
-    margin-top: 25px;
+  }
+  /* el aside*/
+  .sidebar
+  {
     display: flex;
+  }
+  .sidebar img{
     width: 100%;
-    color: #C53CA1;
-    background: white;
-    justify-content: space-evenly;}
-
-
-
-
-
-/* ACA EMPIEZA ......ELLOS SON !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-
-
-
-
-
-.img2{
-    height: 580px;
-    width:560px ;
-    padding: auto;
-    margin: 15px 5px 5px 400px;
-    justify-items: center;
-    border: 5px black solid;
-    border-radius: 50px;
+  }
+  /* modifico la imagen del articulo de ELLOS SON!!!! OSEA EMPIEZA ARTICLE*/
+  .main{
+    background-image: url(/img/fondo.jpg);
     
-
-}
- 
-p
-.pArticulo{
-    text-align: center;
-    background-color: #C53CA1;
-    justify-content: center;
-    padding: 1rem;
-}
-
-
-/*aca empieza ..............REMERAS DE BART!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-
-
-
-
-.lista3{
-    
-    padding: 0%;
-    width: 34%;    
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
-}
-
-
-.lista3 li { 
-  display: inline-block;
- 
-
-}
-.lista3 li a{
-   
-   color: #C53CA1;
-   padding: 20px;
-   display: block;
-   
-
-
-}
-.lista3 a:hover{
-   background: white
-}
-
-.img3{
-    height: 580px;
-    width:560px ;
-    padding: auto;
-    margin: 15px 5px 5px 400px;
-    justify-items: center;
-    border: 5px black solid;
-    border-radius: 50px;
-}
-#subtitulo-foto{
-    
-    justify-content: center;
-    margin: 5px 30% 5px 28%;
-    padding: 1rem;
-    color: #C53CA1;
-}
-
-/*aca empiez............CONTACTO!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-.videoLobo1{
-    height: 580px;
-    width:560px ;
-    padding: auto;
-    margin: 15px 5px 5px 400px;
-    justify-items: center;
-    border: 5px black solid;
-    border-radius: 50px;
-    
-}
-.formS{
-    
-    height: 350px;
-    width:150px ;
-    padding: 15px 20px 30px 40px;
-    margin: 15px 5px 5px 400px;
-    justify-items: center;
+  }
   
-    
-}
-/*media para el responsive*/
-
-@media (min-width: 600px) {
-    .cuerpo {
-      grid-template:
-        "header  header" 100px
-        "nav  nav" auto
-        "main  main" auto
-        "footer footer" 100px /
-        200px    auto;
-    }
-/*media para el responsive*/
-/*media para el responsive*/
-
- @media (min-width: 900px) {
-    .cuerpo {
-      grid-template:
-        "header  header" 100px
-        "nav  nav" auto
-        "main  main" auto
-        "footer " 100px /
-        200px    auto; }
-          
-
+  .main .img2{
+    height: 480px;
+    margin: 1em;
+    border-radius: 1rem;
+    border: 0.2em black solid;
+  }
+  
+  .main .pArticulo{
+    color: #C53CA1;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .pArticulo:hover{
+    transform: scale(1.1);
+    background-color: black;
+  }
+  aside:hover{
+    transform: scale(1.5);
+  
+  }
 
    
