@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
   }
+  html{
+      height:100%;
+  }
   /*para el font, me costo un monton descargarlo eh, punto mas ahi*/
   @font-face {
     font-family:Simpsonfont;
@@ -61,7 +64,8 @@
       "footer"  100px;
   }
   /* media para las mobile*/
-  @media (min-width: 600px) {
+  @media (min-width: 600px) 
+      {
     .grid-container {/* comento esto, por que
       con el grid-template, simplidico todo
       pero lo deho comentado, para recordar las dos maneras
@@ -82,8 +86,8 @@
     }
   }
    /*media para el responsive*/
-  
   @media (min-width: 900px) {
+
     .grid-container {
       grid-template:
         "cabeza cabeza cabeza"  100px
@@ -115,6 +119,7 @@
     flex-direction: column;
     align-items: center;
    
+   
   }
   .navbar .lista{
     list-style: none;
@@ -126,12 +131,12 @@
     height:50px;
     text-align: center;
     margin-top: 30%;
-  
   }
   .lista li:hover{ 
-     overflow:hidden;
-     padding:20px 10px;
-  }
+    overflow:hidden;
+    padding:20px 10px; 
+ }
+
   
   .lista li a{
     margin: 50% 25px;
@@ -204,7 +209,7 @@
     display: flex;
     flex-flow: row;
     flex-direction:;
-    justify-content: space-evenly
+    justify-content: space-evenly;
   }
   .tipoHomero img:hover{
     transform: scale(1.5);
