@@ -18,8 +18,8 @@ body {
   font-family: Simpsonfont;
   src: url(fuente/Simpsonfont.ttf);
   font-size: 1.2rem;
-  background-image: linear-gradient(to bottom, pink, rgb(224, 224, 34),#C53CA1);
-  
+ /* background-image:repeating-linear-gradient(#7217c7,#5c0979,#ff00f1);*/
+  background-image:repeating-linear-gradient(#7217c7,#5c0979,#ededed); 
 }
 
 .grid-container>* {
@@ -86,7 +86,7 @@ body {
   align-items: flex-start;
 }
 
-.cabeza:hover {
+.cabeza:hover{
   transform: rotate(2deg);
   transition-duration: 1.5s;
   transition-delay: 0.1s;
@@ -118,7 +118,7 @@ body {
 }
 
 .lista li a:hover {
-  background-color: chartreuse;
+  background-color: rgb(101, 30, 101);
   overflow: hidden;
 }
 
@@ -211,5 +211,93 @@ border-bottom-left-radius: 50% 50%;
   transition-duration: 1.5s;
   transition-delay: 0.1s;
 }
+/* modifico la imagen del articulo de ELLOS SON!!!! OSEA EMPIEZA ARTICLE*/
+
+.main .img2{
+  height: 480px;
+  margin: 1em;
+  border-radius: 1rem;
+  border: 0.2em black solid;
+}
+
+.main .pArticulo{
+  color: #C53CA1;
+  padding: 1rem;
+  margin: 1rem;
+}
+.pArticulo:hover{
+  transform: scale(1.1);
+  background-color: rgb(61, 5, 50);
+}
+.pArticulo{
+ /* background-color:#5d1e4c;*/
+ background-color: antiquewhite;
+}
+/*contacto*/
+.videoLobo1{
+  height: 100%;
+  display: flex;
+  justify-content:center;
+  border-radius: 1rem;
+  justify-content: space-evenly;  
+}
 
 
+/* remeras de bart con BOOTSTRAP*/
+
+/* el header*/
+.container-fluid header h1{
+  color: #C53CA1;
+}
+.container-fluid header{
+  margin: 13px;
+}
+.container-fluid header:hover{
+  transform: rotate(2deg);
+  transition-duration: 1.5s;
+  transition-delay: 0.1s;
+}
+/* el menu(nav)*/
+.container-fluid nav{
+  margin: 13px;
+}
+.container-fluid nav:hover{
+  transform: rotate(2deg);
+  transition-duration: 1.5s;
+  transition-delay: 0.1s;
+}
+.nav-link:hover{
+  transform: scale(1.1);
+  background-color: #C53CA1;
+}
+/*termina menu*/
+/*============*/
+/* aca empieza el main*/
+
+section{
+  padding-top: 15px;
+}
+main article h2{
+  padding: 15px;
+  
+}
+/* cards*/
+.col-2{
+  margin: 20px;
+  padding: 1rem;
+}
+.card-img-top:hover{
+  transform: translateY(-15px);
+  box-shadow:0 12px 16px rgb(0,0,0,7)
+}
+.container .card-body{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0,0,0,5);
+  
+}
+.container .col-2{
+  background-color: whitesmoke;
+  background-image:url(/img/fondo.jpg) ;
+}
+/* termina cards*/
+/*==============*/
